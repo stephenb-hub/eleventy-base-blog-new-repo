@@ -4,11 +4,29 @@ eleventyNavigation:
   key: Home
   order: 1
 ---
-{% set maxPosts = collections.posts.length | min(3) %}
-<h1>Latest {% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} Posts{% endif %}</h1>
+<h1>Welcome!</h1>
+<br>
+<h5>You've stumbled upon my blog, take a look at <a href="{{ '/posts/' | url }}">THE ARCHIVE</a> to see more.</h5>
+<br>
+<h5>If thats not you're bag, you can check out more information <a href="{{ '/about/' | url }}">ABOUT ME</a> if you like.</h5>
+<br>
+<h5>Feeling talkative? Why not <a href="{{ '/about/contact/' | url }}">CONTACT US</a>, we'd love to hear from you!</h5>
+<br>
+<br>
+<form action="action_page.php">
+  <div class="container" style="background-color:beige">
+    <h2>Subscribe to our Newsletter</h2>
+  </div>
 
-{% set postslist = collections.posts | head(-3) %}
-{% set postslistCounter = collections.posts | length %}
-{% include "postslist.njk" %}
+  <div class="container" style="background-color:beige">
+    <input type="text" placeholder="Name" name="name" required>
+    <input type="text" placeholder="Email address" name="mail" required>
+    <label>
+      <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+    </label>
+  </div>
 
-<p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
+  <div class="container">
+    <input type="submit" value="Subscribe">
+  </div>
+</form>
