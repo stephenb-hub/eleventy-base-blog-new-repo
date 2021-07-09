@@ -13,3 +13,5 @@ The teachers did a good job at explaining what it does and the purpose of Pseudo
 It is a universal coding language to break down tasks which can then be translated into the respective code required.
 
 I did find this a challenge as being new to coding, having to ignore any techniques i've already picked up was difficult.
+
+<https://codepen.io/alphasc/pen/dyvEMJJ>
